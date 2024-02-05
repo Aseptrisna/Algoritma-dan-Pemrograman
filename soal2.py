@@ -32,7 +32,14 @@ else:
         total_jumlah = jumlah_subderet(subderet_menaik)
         print(total_jumlah)
 
+# Keterangan:
+# Program ini menerima masukan berupa nilai N dan N buah bilangan positif.
+# Fungsi cari_subderet_menaik mencari semua subderet menaik dari daftar bilangan.
+# Fungsi jumlah_subderet menghitung total bilangan dalam subderet menaik.
+# Jika tidak ada subderet menaik, program akan mencetak 0.
+
 
 #Github: https://github.com/Aseptrisna/Algoritma-dan-Pemrograman.git
 #Dokumentasi :https://github.com/Aseptrisna/Algoritma-dan-Pemrograman/blob/master/README.md
 #Full code:https://github.com/Aseptrisna/Algoritma-dan-Pemrograman/blob/master/soal2.py
+
