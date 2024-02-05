@@ -1,3 +1,5 @@
+
+# https://github.com/Aseptrisna/Algoritma-dan-Pemrograman/tree/master
 def main():
     try:
         N = int(input("Masukkan jumlah pegawai (N): "))

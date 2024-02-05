@@ -1,33 +1,38 @@
-def cari_suburut_menaik(angka):
-    suburut = []
-    suburut_saat_ini = [angka[0]]
-
-    for i in range(1, len(angka)):
-        if angka[i] > angka[i - 1]:
-            suburut_saat_ini.append(angka[i])
+def cari_subderet_menaik(arr):
+    subderet = []
+    subderet_saat_ini = [arr[0]]
+    
+    for i in range(1, len(arr)):
+        if arr[i] > arr[i - 1]:
+            subderet_saat_ini.append(arr[i])
         else:
-            if len(suburut_saat_ini) > 1:
-                suburut.append(suburut_saat_ini)
-            suburut_saat_ini = [angka[i]]
+            if len(subderet_saat_ini) > 1:
+                subderet.append(subderet_saat_ini)
+            subderet_saat_ini = [arr[i]]
+    
+    if len(subderet_saat_ini) > 1:
+        subderet.append(subderet_saat_ini)
+        
+    return subderet
 
-    if len(suburut_saat_ini) > 1:
-        suburut.append(suburut_saat_ini)
-
-    return suburut
-
-def jumlah_suburut(suburut):
-    return sum([sum(suburut_elemen) for suburut_elemen in suburut])
+def jumlah_subderet(subderet):
+    return sum([sum(deret) for deret in subderet])
 
 n = int(input().strip())
-angka = list(map(int, input().strip().split()))
+bilangan = list(map(int, input().strip().split()))
 
-if n != len(angka):
-    print("Jumlah bilangan tidak sesuai dengan jumlah yang ditentukan.")
+if n != len(bilangan):
+    print("Jumlah bilangan tidak sesuai dengan nilai N yang diberikan.")
 else:
-    suburut_menaik = cari_suburut_menaik(angka)
+    subderet_menaik = cari_subderet_menaik(bilangan)
     
-    if not suburut_menaik:
+    if not subderet_menaik:
         print(0)
     else:
-        total_jumlah = jumlah_suburut(suburut_menaik)
+        total_jumlah = jumlah_subderet(subderet_menaik)
         print(total_jumlah)
+
+
+#Github: https://github.com/Aseptrisna/Algoritma-dan-Pemrograman.git
+#Dokumentasi :https://github.com/Aseptrisna/Algoritma-dan-Pemrograman/blob/master/README.md
+#Full code:https://github.com/Aseptrisna/Algoritma-dan-Pemrograman/blob/master/soal2.py
